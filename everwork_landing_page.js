@@ -255,7 +255,7 @@ $( document ).ready(function() {
           window.scrollBy(0, lastScrollPos);
         });
     		
-        console.log("Mobile view.");
+        console.log("Mobile view..");
         $("#join-waitlist-company").val("Join");
     }
     
@@ -279,11 +279,7 @@ function isCalendlyEvent(e) {
 };
  
 window.addEventListener("message", function(e) {
-  if(isCalendlyEvent(e)) {
-    /* Example to get the name of the event */
-    console.log("Event name:", e.data.event);
-    
-    /* Example to get the payload of the event */
-    console.log("Event details:", e.data.payload);
+  if(isCalendlyEvent(e) && e.data.event == "calendly.event_scheduled") {
+    $('#waitlist-modal-close').click();
   }
 });
