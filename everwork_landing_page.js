@@ -1,7 +1,3 @@
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"/>
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-<script>
-
 $.fn.isInViewport = function() {
     var elementTop = $(this).offset().top;
     var elementBottom = elementTop + $(this).outerHeight();
@@ -289,4 +285,3 @@ window.addEventListener("message", function(e) {
     console.log("Event details:", e.data.payload);
   }
 });
-</script>
