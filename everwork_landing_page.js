@@ -158,7 +158,9 @@ $('#email-company-form').submit(() => {
 
 // Transition to third step
 $('#more-info-form').submit(() => {
-    $('#hack-more-info-success-trigger').click();
+    if ($("#worker-toggle-btn").hasClass("toggle-active")) {
+      $('#hack-more-info-success-trigger').click();
+    }
 });
 
 $('#schedule-call').click(() => {
@@ -253,7 +255,7 @@ $( document ).ready(function() {
           window.scrollBy(0, lastScrollPos);
         });
     		
-        console.log("Mobile view");
+        console.log("Mobile view.");
         $("#join-waitlist-company").val("Join");
     }
     
