@@ -272,6 +272,16 @@ $( document ).ready(function() {
     if (window.location.hash.includes("company")) {
       $("#company-toggle-btn").click();
     }
+
+    if (window.location.hash.includes("contact")) {
+      console.log("Contact hash");
+      if ($(window).width() < 992) {
+        $('body').css('overflow', 'hidden');
+        $('#site-wrapper').css('overflow', 'hidden');
+      }
+      $(".unique-contact-modal").css("display", "flex");
+      $(".unique-contact-modal").css("opacity", "1");
+    }
 });
 
 function isCalendlyEvent(e) {
